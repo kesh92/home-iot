@@ -196,18 +196,6 @@ paths:
           schema:
             $ref: "#/definitions/LightingSummary"
       x-swagger-router-controller: "ZWave"
-  /temperature:
-    get:
-      tags:
-      - "Environment"
-      operationId: "temperatureSummary"
-      parameters: []
-      responses:
-        200:
-          description: "ok"
-          schema:
-            $ref: "#/definitions/TemperatureSummary"
-      x-swagger-router-controller: "Environment"
   /temperature/forecast/{days}:
     get:
       tags:
@@ -281,6 +269,18 @@ paths:
           description: "Status of the operation"
           schema:
             $ref: "#/definitions/ApiResponse"
+      x-swagger-router-controller: "Environment"
+  /temperatureStatus:
+    get:
+      tags:
+      - "Environment"
+      operationId: "temperatureSummary"
+      parameters: []
+      responses:
+        200:
+          description: "ok"
+          schema:
+            $ref: "#/definitions/TemperatureSummary"
       x-swagger-router-controller: "Environment"
   /zones:
     get:
